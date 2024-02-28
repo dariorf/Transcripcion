@@ -16,8 +16,13 @@ import java.nio.channels.Channels;
 import java.nio.channels.Pipe;
 import java.nio.charset.StandardCharsets;
 
+/**
+ *
+ * @author dariorf
+ */
 public class Principal {
 
+    public static final String RUTA = "https://api.openai.com/v1/audio/transcriptions";
     public static final String TOKEN = "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";
 
     public static void main(String[] args) {
@@ -50,7 +55,7 @@ public class Principal {
                 }
             }).start();
 
-            HttpRequest httpRequest = HttpRequest.newBuilder(URI.create("https://api.openai.com/v1/audio/transcriptions"))
+            HttpRequest httpRequest = HttpRequest.newBuilder(URI.create(RUTA))
                     .header("Authorization", "Bearer " + TOKEN)
                     .header("Content-Type", httpEntity.getContentType().getValue())
                     .POST(HttpRequest.BodyPublishers.ofInputStream(() -> Channels.newInputStream(pipe.source())))
