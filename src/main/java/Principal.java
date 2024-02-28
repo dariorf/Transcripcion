@@ -21,7 +21,7 @@ public class Principal {
     public static final String TOKEN = "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";
 
     public static void main(String[] args) {
-        File audio = new File("/home/dariorf/Descargas/quothello-therequot-158832.mp3");
+        File audio = new File("audios/boletin.mp3");
         System.out.println(transcribir(audio));
     }
 
