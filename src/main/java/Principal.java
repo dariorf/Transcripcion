@@ -23,7 +23,7 @@ import java.nio.charset.StandardCharsets;
 public class Principal {
 
     public static final String RUTA = "https://api.openai.com/v1/audio/transcriptions";
-    public static final String TOKEN = "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";
+    public static final String TOKEN = "Mi Token";
 
     public static void main(String[] args) {
         File audio = new File("audios/boletin.mp3");
